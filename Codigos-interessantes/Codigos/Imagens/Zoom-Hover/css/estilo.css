@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    width: 500px;
+    height: 500px;
+    margin: 100px auto;
+    overflow: hidden;
+}
+
+.content img {
+    transition: 2s;
+    width: 500px;
+    height: 500px;
+}
+
+.content img:hover {
+    transform: scale(1.5);
+    width: auto;
+    height: 500px;
+    width: 500px;
+}

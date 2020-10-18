@@ -1,0 +1,13 @@
+F:\Youtube Channel\Dotnet Mob\asp.net tutorial\user registration\project\User Registration\User Registration\bin\User Registration.dll.config
+F:\Youtube Channel\Dotnet Mob\asp.net tutorial\user registration\project\User Registration\User Registration\bin\User Registration.dll
+F:\Youtube Channel\Dotnet Mob\asp.net tutorial\user registration\project\User Registration\User Registration\bin\User Registration.pdb
+F:\Youtube Channel\Dotnet Mob\asp.net tutorial\user registration\project\User Registration\User Registration\obj\Debug\User Registration.csprojResolveAssemblyReference.cache
+F:\Youtube Channel\Dotnet Mob\asp.net tutorial\user registration\project\User Registration\User Registration\obj\Debug\User Registration.dll
+F:\Youtube Channel\Dotnet Mob\asp.net tutorial\user registration\project\User Registration\User Registration\obj\Debug\User Registration.pdb
+C:\Users\Alexandre\Desktop\Banco\Register Login\User Registration\bin\User Registration.dll.config
+C:\Users\Alexandre\Desktop\Banco\Register Login\User Registration\bin\User Registration.dll
+C:\Users\Alexandre\Desktop\Banco\Register Login\User Registration\bin\User Registration.pdb
+C:\Users\Alexandre\Desktop\Banco\Register Login\User Registration\obj\Debug\User Registration.csprojAssemblyReference.cache
+C:\Users\Alexandre\Desktop\Banco\Register Login\User Registration\obj\Debug\User Registration.csproj.CoreCompileInputs.cache
+C:\Users\Alexandre\Desktop\Banco\Register Login\User Registration\obj\Debug\User Registration.dll
+C:\Users\Alexandre\Desktop\Banco\Register Login\User Registration\obj\Debug\User Registration.pdb

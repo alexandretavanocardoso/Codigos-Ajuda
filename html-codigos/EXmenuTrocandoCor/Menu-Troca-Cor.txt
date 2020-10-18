@@ -1,0 +1,48 @@
+CSS
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    border-bottom: 1px solid #fff;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 999;
+}
+
+/* Nova classe a ser atribuída ao elemento com os estilos desejados */
+
+.mudaCor{/*Usada no JavaScript*/
+    background-color:#fff;
+    color: black;
+}
+
+.item{display:inline-block;padding:15px;}
+
+#menu {
+    background-color: rgba(0,0,0,0);
+
+}
+.mudaCor{
+    background-color:#fff !important;
+}
+-------------------------------------------------
+JS
+<script type="text/javascript">
+var el = document.getElementById('menu'); // elemento alvo
+var numPx = '50'; // Quantidade de pixels a contar do TOP até definir a cor
+
+window.addEventListener('scroll', function() { // IMPORTANTE
+    if (window.scrollY > numPx) {
+    	el.classList.add('mudaCor'); // adiciona classe "mudaCor"
+    } else {
+      el.classList.remove('mudaCor'); // remove classe "mudaCor"
+    }
+});
+</script>
+----------------------------------------
+HTML
+<div id="menu">
+    <div class="item">Inicio</div>
+    <div class="item">Sobre</div>
+</div>

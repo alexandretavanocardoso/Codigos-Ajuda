@@ -1,0 +1,34 @@
+Importar Fonte
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap');
+
+Usar fonte não instalada no pc
+
+@font-face {
+	font-family: Barrio;
+	src: url(../fonts/Barrio-Regular.ttf)
+}
+
+h1 {
+	font-family: Barrio;
+}
+
+Ao preencher o atributo src da diretiva 
+@font-face podemos usar a função local() para informar 
+ao browser que ele deve tentar usar uma fonte local, 
+caso a mesma esteja instalada. Se a fonte local não for localizada, 
+então será considerado o valor da função url() e o
+ browser fará download do arquivo externo.
+
+@font-face {
+    font-family: [nome];
+    src: local([nome da fonte local]), url([caminho]);
+}
+
+Por exemplo, se há a possibilidade de o cliente possuir a 
+fonte instalada localmente, podemos definir essa diretiva da seguinte forma:
+
+@font-face {
+	font-family: Barrio;
+	src: local(Barrio), url(../fonts/Barrio-Regular.ttf)
+}

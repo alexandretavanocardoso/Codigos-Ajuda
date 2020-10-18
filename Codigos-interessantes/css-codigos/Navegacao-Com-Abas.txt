@@ -1,0 +1,42 @@
+Navegação com Abas CSS3 PURO
+
+HTML
+<ul>
+	<li id="atual"><a href="index.html">Home</a></li> //Dar um ID para cada Li de cada Pagina
+	<li><a href="contato.html">Contato</a></li>
+	<li><a href="contato.html">Sobre</a></li>
+</ul>
+
+CSS
+ul{
+	margin:0;
+	padding:0;
+	list-style: none;
+	width: 720px;
+}
+
+ul li{
+	float: left;
+	background: url('img/aba-direita.png') no-repeat top right;
+}
+
+li a{
+	display: block;
+	padding:0 2em;
+	line-height: 3em;
+	text-decoration: none;
+	background: url('img/aba-esquerda.png') no-repeat top left;
+	color:white;
+}
+
+ul a:hover{
+	color:#894a1f;
+}
+
+ul #atual{
+	background: url('img/aba-direita-atual.png') no-repeat top right;
+}
+ul #atual a{
+background: url('img/aba-esquerda-atual.png') no-repeat top left;
+}
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <h1>Image Zoom</h1>
+
+    <p>Mouse over the image:</p>
+
+    <div class="img-zoom-container">
+        <img id="myimage" src="img/perfil.jpg" width="500" height="500">
+        <div id="myresult" class="img-zoom-result"></div>
+    </div>
+
+    <p>A imagem deve ser colocada dentro de um container com posicionamento relativo.</p>
+    <p>O resultado pode ser colocado em qualquer lugar da página, mas deve ter o nome da classe "img-zoom-result"</p>
+    <p>Certifique-se de que a imagem e o resultado tenham IDs. Esses IDs são usados ​​quando um javaScript inicia o efeito de zoom.</p>
+
+    <script>
+        // Initiate zoom effect:
+        imageZoom("myimage", "myresult");
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+html { 
+    background: url(https://i.stack.imgur.com/NsOce.jpg) no-repeat center center fixed; 
+    height: 1000px;
+}
+
+
+/* Define o menu */
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    border-bottom: 1px solid #fff;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Nova classe a ser atribuída ao elemento com os estilos desejados */
+
+.mudaCor{/*Usada no JavaScript*/
+    background-color:#fff;
+    color: #000;
+}
+
+.item{display:inline-block;padding:15px;}
+
+#menu {
+    background-color: rgba(0,0,0,0);
+
+}
+.mudaCor{
+    background-color:#fff !important;
+}
+
+/*Serve pa nada*/
+.section{margin-top:200px;height:500px; padding: 50px;}
+
+.conteudo{display: flex;}
+

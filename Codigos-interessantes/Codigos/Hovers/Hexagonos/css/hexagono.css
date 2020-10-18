@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    overflow: hidden;
+}
+
+
+/*Criar Hexagono
+
+.hexagono {
+    position: relative;
+    width: 60px;
+    height: 100px;
+    background-color: black;
+    margin: 10px;
+}
+
+.hexagono::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 0;
+    height: 0;
+    border-right: 30px solid #000;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+}
+
+.hexagono::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 0;
+    height: 0;
+    border-left: 30px solid #000;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+}
+*/
+
+
+/*Criar Hexagono Clip Path
+
+.hexagono {
+    position: relative;
+    width: 100px;
+    height: 110px;
+    background: #0f0;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+*/
+
+
+/* Efeito Hover Cor
+
+.hexagono {
+    position: relative;
+    width: 100px;
+    height: 110px;
+    background: #111;
+    margin: 1px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: 2s;
+}
+
+.hexagono:hover {
+    transition: 0s;
+    background: #0f0;
+}
+
+.hexagono::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    animation: animate 4s linear infinite;
+}
+
+.row {
+    display: inline-flex;
+    margin-top: -32px;
+    margin-left: -50px;
+}
+
+.row:nth-child(even) {
+    margin-left: 1px;
+}
+
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(3600deg);
+    }
+}
+
+*/
+
+
+/* Stroke Hover 
+
+.hexagono {
+    position: relative;
+    width: 100px;
+    height: 110px;
+    background: #111;
+    margin: 2px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: 2s;
+}
+
+.hexagono:hover {
+    transition: 0s;
+    background: #0f0;
+}
+
+.hexagono::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    background: #111;
+    z-index: 1;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hexagono::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    animation: animate 4s linear infinite;
+}
+
+.row {
+    display: inline-flex;
+    margin-top: -32px;
+    margin-left: -50px;
+}
+
+.row:nth-child(even) {
+    margin-left: 1px;
+}
+
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(3600deg);
+    }
+}
+
+*/
+
+
+/* Efeito Hover Fundo com JS*/
+
+#cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background: #0f0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    animation: animate 4s linear infinite;
+}
+
+.hexagono {
+    position: relative;
+    width: 100px;
+    height: 110px;
+    background: #111;
+    margin: 2px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: 2s;
+}
+
+.hexagono::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.row {
+    display: inline-flex;
+    margin-top: -32px;
+    margin-left: -50px;
+}
+
+.row:nth-child(even) {
+    margin-left: 1px;
+}
+
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg) blur(50px);
+    }
+    100% {
+        filter: hue-rotate(3600deg) blur(50px);
+    }
+}
+
+
+/* Animação Hexagono
+
+.container {
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(3600deg);
+    }
+}
+*/

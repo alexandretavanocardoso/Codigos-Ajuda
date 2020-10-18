@@ -1,0 +1,166 @@
+body {
+  background: yellow;
+}
+h1 {
+  position: relative;
+  text-align: center;
+  color: #353535;
+  font-family: 'Oswald', sans-serif;
+  font-size: 45px;
+  margin: 0;
+}
+
+h2 {
+  position: relative;
+  text-align: center;
+  color: #353535;
+  font-family: serif;
+  font-size: 30px;
+  margin: 0;
+}
+
+p {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  color: #676767;
+}
+.intro{
+  margin-bottom: 0;
+}
+
+.frame {
+  width: 90%;
+  margin: auto 40px;
+  text-align: center;
+}
+
+.custom-eft {
+  padding: 0 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  font-size: 2em;
+}
+
+.eft1{
+  color: transparent;
+	-webkit-text-stroke: 0.03em rgba(0,0,0,1);
+   text-shadow: -5px 0 rgba(0, 255, 255, 0.4), 5px 0 rgba(255, 0, 255, 0.4);
+}
+
+.eft2{
+  font-family: 'Oswald';
+  color: #fff;
+	background: #ff1f8f;
+  border-radius: 3em .5em 2em .5em/.4em 2em .5em 3em;
+}
+span:nth-child(1) { color: blue; }
+span:nth-child(2) { color: white; background-color: red; font-size: 120%; }
+span:nth-child(3) { color: green; }
+span:nth-child(4) { color: #fff; text-decoration: underline; }
+span:nth-child(5) { color: pink; font-style: italic; }
+span:nth-child(6) { color: skyblue; font-style: italic; }
+span:nth-child(7) { color: yellowgreen; text-decoration: underline; }
+span:nth-child(8) { color: orange; text-decoration: underline; }
+span:nth-child(9) { color: white; background-color: purple; font-size: 150%; border-radius: 15px; padding: 3px; }
+span:nth-child(10) { color: navy; }
+
+.eft3{
+  color: #ff1f8f;
+	-webkit-text-stroke: 0.05em rgba(0,0,0,1);
+}
+
+.eft4{
+  color: transparent;
+  background: linear-gradient( 0deg, #000 0% 50% , #ff1f8f 50% 100%);
+	-webkit-background-clip: text;
+}
+
+.eft5{
+	filter: saturate(80%);
+	-webkit-background-clip: text;
+	-webkit-box-reflect: below -0.25em -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, .6)), to(transparent));
+  color:#ff1f8f;
+font-weight: bold;
+text-shadow: -1px -1px #f9abd1,
+  1px 1px #bd1468;
+}
+
+.eft6{
+  color: transparent;
+	background: repeating-linear-gradient( -45deg, #ff1f8f 0% 50%, #000 50%
+		 100% );
+	-webkit-background-clip: text;
+}
+
+.eft7{
+  color: #ff1f8f;
+	background: yellow;
+	text-shadow : 
+		0 0 0.1em rgba(0,0,0,1),
+		0.01em 0.04em 0.03em rgba(0,0,0,1);
+	-webkit-background-clip : text;
+  text-decoration: line-through;
+}
+
+.eft8{
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  text-shadow: 
+						4px 4px #ff1f8f,
+						8px 8px #000000;
+}
+
+.eft9{
+  background: #ff1f8f;
+  color: #fff;
+  text-shadow: 
+		0 0.05em 0.08em rgba(0,0,0,0.7);
+}
+
+.eft10{
+  color: #ff1f8f;
+	text-shadow: 
+		0.04em 0.02em 0 #B0BEC5, 
+		0.08em 0.05em 0 rgba(0, 0, 0, 0.6);
+}
+
+.eft11{
+  color: #000;
+   text-shadow: -2px 0 0 #ff1f8f,  2px 0 0 #00FFFF;
+}
+
+.eft12 {
+  position: relative;
+}
+
+.eft12:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: #000;
+  bottom: 9px;
+}
+ .eft12 span{
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(to bottom, #000, #000 50%, #ff1f8f 50%, #ff1f8f 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+  white-space: nowrap;
+}
+
+.logo{
+  font-family: Andale Mono, monospace;
+}

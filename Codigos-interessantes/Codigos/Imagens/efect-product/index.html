@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Magnifying Using Magnify JS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="magnify.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <img src="01.jpg" id="image" class="zoom" data-magnify-src="01.jpg">
+    <img src="02.jpg" id="image" class="zoom" data-magnify-src="02.jpg">
+    <img src="03.jpg" id="image" class="zoom" data-magnify-src="03.jpg">
+
+    <script src="jquery.magnify.js" charset="utf-8"></script>
+    <script>
+    $(document).ready(function() {
+      $('.zoom').magnify();
+    });
+    </script>
+
+  </body>
+</html>

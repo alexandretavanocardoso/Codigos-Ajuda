@@ -1,0 +1,10 @@
+<!-- JavaScript js-->
+	<!-- Dentro do HEAD -->
+	<!-- Pesquisar como "html5shiv" -->
+	<!-- Comando Abaixo Usado para Browsers com versoes antigas rodem as novas tags do HTML5-->
+	<!-- Usado com o comando da Pasta "js"-->
+
+
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+	<![endif]-->

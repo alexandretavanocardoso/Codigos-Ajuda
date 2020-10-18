@@ -1,0 +1,50 @@
+.ta-form-body{
+	background-image: url('../images/cloud_bg.jpg');
+	background-size: cover;
+	background-position: center !important;
+	background-attachment: fixed;
+}
+
+.ta-form-body-inner{
+	/* display: none; */
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-image: url('../images/clouds_trans.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/*//////////////////////// body ////////////////////////*/
+
+.centered-form{
+	margin-top: 60px;
+}
+
+.panel{
+	background-color: rgba(255, 255, 255, 0.58);
+	padding: 15px;
+	box-shadow: 0px 0px 20px -3px #000, 0px 0px 20px -3px #e21b23 inset;
+	border: none;
+}
+
+.panel-heading{
+	/* background-color: rgba(245, 245, 245, 0.55) !important; */
+	background: radial-gradient(white 8%, transparent 66%, transparent 5%) !important;
+	border-bottom: none;
+}
+
+.seperator{
+	border-bottom: 1px solid #FFf;
+	border-top: 1px solid #FFf;
+	border-radius: 25px;
+	margin-top: 30px;
+}
+
+.seperator img{
+	margin-top: -12.5px;
+	float: right
+}
+
+/*//////////////////////// eof body ////////////////////////*/

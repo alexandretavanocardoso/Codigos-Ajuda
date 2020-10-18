@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Pepsi Troca de imagem ao clica</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <section class="sec">
+        <header>
+            <a href="#"><img src="logo.png" class="logo" alt=""></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Novo</a></li>
+            </ul>
+        </header>
+        <div class="contente">
+            <div class="textbox">
+                <h2> Tome pepsi<br><span>TOME</span></h2>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+                    'Content here, content here', making it look like readable English. </p>
+                <a href="#"> Veja nossos produtos</a>
+            </div>
+            <!-- Imagem a ser Trocada -->
+            <div class="imgbox">
+                <img src="pepsi001.png" alt="" class="pepsi">
+            </div>
+            <!-- FIM Imagem a ser Trocada -->
+        </div>
+        <!-- Clique Para Fazer mudar-->
+        <ul class="thumb">
+            <!--Onclick e imagem a ser trocada = onclick="imgSlider('pepsi001.png')-->
+            <!--Onclick e cor de fundo = onclick="BGcolor('white')"-->
+            <li><img src="pepsi001.png" onclick="imgSlider('pepsi001.png');BGcolor('#0062be')"></li>
+            <li><img src="pepsi002.png" onclick="imgSlider('pepsi002.png');BGcolor('#e60c2c')" </li>
+                <li><img src="pepsi003.png" onclick="imgSlider('pepsi003.png');BGcolor('#1e1e1e')"></li>
+        </ul>
+        <!-- FIM Clique Para Fazer mudar-->
+        <ul class="sci">
+            <li>
+                <a href="#"><img src="facebook.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="twitter.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="instagram.png" alt=""></a>
+            </li>
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

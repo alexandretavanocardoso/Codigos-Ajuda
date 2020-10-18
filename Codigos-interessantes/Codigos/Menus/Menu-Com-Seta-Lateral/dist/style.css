@@ -1,0 +1,35 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: black;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  min-height: 100vh;
+  display: flex;
+}
+.demo-card-wide.mdl-card {
+  width: 80%;
+  height: 80%;
+}
+.mdl-layout__header {
+  background: url("https://nypost.com/wp-content/uploads/sites/2/2018/11/mars-sunrise.jpg")
+    center;
+}
+.mdl-layout__tab-bar,
+.mdl-layout__tab-bar-button {
+  background: transparent;
+}
+
+h4 {
+  color: #00cbe6;
+  font-family: Audiowide;
+}
+
+.page-content, .mdl-layout__drawer {
+  padding: 10px;
+}

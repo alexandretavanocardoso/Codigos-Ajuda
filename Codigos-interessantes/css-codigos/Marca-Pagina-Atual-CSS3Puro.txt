@@ -1,0 +1,28 @@
+Marcar Pagina Atual CSS3 PURO
+
+
+<body id="home"> //Dar um id para cada body de cada pagina
+
+	<h2>Home</h2>
+
+	<ul id="Navegação-vertical">
+		<li class="home"><a href="index.html">Home</a></li> //Dar uma classe para cada Link
+		<li class="contato"><a href="contato.html">Contato</a></li>
+	</ul>
+
+</body>
+
+CSS
+
+#home #Navegação-vertical .home a{ //ID = body, ID = ul, CLASS = Link para Pag
+	background-position: right bottom;
+	color: white;
+	background-color: #f99200;
+}
+
+
+#contato #Navegação-vertical .contato a{ //ID = body, ID = ul, CLASS = Link para Pag
+	background-position: right bottom;
+	color: white;
+	background-color: #f99200;
+}

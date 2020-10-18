@@ -1,0 +1,42 @@
+Flexbox
+----------------------------
+
+FLEX-GROW: Aumentar a largura dos elementos tendo uma proporção.
+
+FLEX-BASIS: Trabalha como um widht, porem para fispay:flex, é o melhor a ser usado.
+
+FLEX-SHRINK: Os elementos se reduzem, dependendo da proporção da tela.
+
+FLEX-DIRECTION: Usado para alterar direção e posição das linhas e colunas.
+row-reverse - Troca a ordem da linha
+column - A linha vira uma coluna
+column-reverse - Troca a ordem das colunas
+
+ORDER: Altera a ordem da forma que voce quiser.
+
+Shorthand
+/*Grow Shirink Basis*/
+flex: 1 1 auto;
+
+JUSTIFY-CONTENT: Alinha os elementos na horizontal.
+flex-start - As propriedades ficam no inicio da tela (PADRÃO)
+flex-end - As propriedades ficam no fim da tela
+center - Centraliza os elementos
+space-between - Ficam espaçadas igualmente entre si
+space-around - Ficam espaçadas igualmente entre si e cria uma borda no inicio e fim
+
+ALIGN-ITEMS: Alinha os elementos na vertical
+flex-start - As propriedades ficam no inicio da tela (PADRÃO)
+flex-end - As propriedades ficam no fim da tela
+stretch - Alonga os elementos com a proporção de sua caixa
+center - Centraliza os elementos
+
+ALIGN-SELF: Alinha apenas um item.
+flex-start - As propriedades ficam no inicio da tela (PADRÃO)
+flex-end - As propriedades ficam no fim da tela
+stretch - Alonga os elementos com a proporção de sua caixa
+center - Centraliza os elementos
+
+
+
+

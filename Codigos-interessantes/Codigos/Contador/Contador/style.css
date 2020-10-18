@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.num {
+    font-size: 4em;
+    font-family: sans-serif;
+    border: 8px solid black;
+    color: black;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    line-height: 300px;
+}

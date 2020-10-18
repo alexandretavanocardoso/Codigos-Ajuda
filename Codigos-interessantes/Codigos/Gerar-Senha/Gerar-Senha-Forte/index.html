@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gerar Senha Forte</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div class="input">
+        <h2>Gerar Senha</h2>
+        <input type="text" placeholder="Crie senha" name="" id="Senha" readonly="">
+        <div id="btn" onclick="getPassword();">Gerar Senha</div>
+    </div>
+
+    <script type="text/javascript">
+        function getPassword() {
+            var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&()_+?><:{}[]";
+            var senhatotal = 16;
+            var senha = "";
+
+            for (var i = 0; i < senhatotal; i++) {
+                var randomNumber = Math.floor(Math.random() * chars.length);
+                senha += chars.substring(randomNumber, randomNumber + 1);
+            }
+            document.getElementById("Senha").value = senha
+        }
+    </script>
+</body>
+
+</html>

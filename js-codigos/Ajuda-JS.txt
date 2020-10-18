@@ -1,0 +1,18 @@
+JS
+----------
+
+Escolher e mostrar senha
+
+<script>
+function mostrarSenha(){
+	var tipo = document.getElementById("txtSenha");
+                
+	if (tipo.type == "password") {
+  
+		tipo.type = "text";
+	} else {
+                  
+		tipo.type = "password";
+	}
+}
+</script>

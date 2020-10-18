@@ -1,0 +1,69 @@
+-- Exibir todos os dados dos municipios
+select * from municipio;
+
+-- Exibir municipios com nome Barra Bonita
+select * from municipio where nomemunicipio like 'Barra Bonita';
+
+-- Exibir municipios que começa com BA
+select * from municipio where nomemunicipio like 'Ba%';
+
+-- Exibir municipios que tem em qualquer parte da palavra o BA
+select * from municipio where nomemunicipio like '%Ba%';
+
+-- Exibir municipios que termina com BA
+select * from municipio where nomemunicipio like '%Ba'; 
+
+-- In
+select * from estado where idestado in (11,12,21); 
+
+-- or
+select * from estado where idestado = 11 or 12 or 21; 
+
+-- Exibir o estado da regiao id = 2
+select * from regiao where idregiao = 12;
+
+-- Exibir as mesoregioes em ordem alfabetica de nome
+select * from estado order by mesoregiao;
+
+-- Exibir os estados com id maior que 15;
+select * from estado where idestado > 15;
+
+-- Exibir os estados com id 20 e 30
+select * from estado where idestado >= 20 and idestado <= 30; 
+OU
+select * from estado where idestado between 20 and 30;
+
+-- Exibir as pessoas nascida no ano de 81
+select * from cliente where year(datanascimento) = 1980; 
+
+-- Exibir as pessoas nascida no mes 8
+select * from cliente where month(datanascimento) = 8;
+
+-- Exibir as pessoas nascida no dia 27
+select * from cliente where day(datanascimento) = 27;
+
+/* Funções Agregadas*/ (5)
+
+-- Quantos estados existem cadastrados
+select count(*) AS QtdeEstados from estado /* Contagem de linhas / quantidade */ /* AS = Apelido */
+
+select max(idestado) from estado /* Busca o maior valor de um campo */
+
+select min(idestado) from estado /* Busca o menor valor de um campo */
+
+select avg(idestado) from estado /* Busca a media de um campo */ 
+
+select Sum(idestado) from estado /* Soma */
+
+--Subquerys ou Subconsulta
+=> Select dentro de outro
+
+-- Exibir a regiao Norte e seus estados
+select * from estado where idregiao = (select idregiao from regiao where nomeregiao like 'Norte')
+
+===================================================================================================================================================
+
+
+
+
+

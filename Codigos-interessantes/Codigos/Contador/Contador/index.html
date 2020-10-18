@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contador</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!-- Numero a ser alcançado-->
+    <div class="num">
+        100
+    </div>
+
+
+    <script src="Plugin.js"></script>
+    <!-- Jquery Plugin Necessario-->
+
+    <!-- Script Contador -->
+    <script>
+        $(function() {
+            let start = 0;
+            let end = $(".num").html();
+            let speed = 10; //Determina Velocidade
+
+            setInterval(function() {
+                if (start < end) {
+                    start++;
+                }
+                $(".num").html(start);
+            }, speed);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Troca de imagem ao clique</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <section class="sec">
+        <div class="contente">
+            <!-- Imagem a ser Trocada -->
+            <div class="imgbox">
+                <img src="pepsi001.png" alt="" class="pepsi">
+            </div>
+            <!-- FIM Imagem a ser Trocada -->
+        </div>
+        <!-- Clique Para Fazer mudar-->
+        <ul class="thumb">
+            <!--Onclick e imagem a ser trocada = onclick="imgSlider('pepsi001.png')-->
+            <!--Onclick e cor de fundo = onclick="BGcolor('white')"-->
+            <li><img src="pepsi001.png" onclick="imgSlider('pepsi001.png');BGcolor('#0062be')"></li>
+            <li><img src="pepsi002.png" onclick="imgSlider('pepsi002.png');BGcolor('#e60c2c')"></li>
+            <li><img src="pepsi003.png" onclick="imgSlider('pepsi003.png');BGcolor('#1e1e1e')"></li>
+        </ul>
+        <!-- FIM Clique Para Fazer mudar-->
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

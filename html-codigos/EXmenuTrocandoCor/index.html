@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+	<div id="menu">
+    	<div class="item">Inicio</div>
+    	<div class="item">Sobre</div>
+	</div>
+	<div class="conteudo">
+    	<div class="section">Primeira Secção</div>
+	</div>
+
+
+<script type="text/javascript">
+var el = document.getElementById('menu'); // elemento alvo
+var numPx = '50'; // Quantidade de pixels a contar do TOP até definir a cor
+
+window.addEventListener('scroll', function() {
+    if (window.scrollY > numPx) {
+    	el.classList.add('mudaCor'); // adiciona classe "mudaCor"
+    } else {
+      el.classList.remove('mudaCor'); // remove classe "mudaCor"
+    }
+});
+
+</script>
+
+
+</body>
+</html>

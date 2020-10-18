@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>BG-Parallax-(Nadeesha_Eranjan)</title>
+
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- custom styles -->
+	<link href="css/style.css" rel="stylesheet">
+
+</head>
+<body class="ta-form-body">
+	<div class="ta-form-body-inner"></div>
+
+	<!-- body -->
+	<div class="form-container container">
+		<div class="row centered-form">
+			<div class="col-xs-12 col-sm-10 col-md-6 col-sm-offset-1 col-md-offset-3">
+				<div class="panel panel-default">
+					<div class="panel-heading text-center">
+						<img src="images/logo.png" alt="" width="50%">
+						<div class="seperator">
+							<img src="images/airplane_icon.png" alt="" width="25px">
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- eof body -->
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var movementStrength = 25;
+			var height = movementStrength / $(window).height();
+			var width = movementStrength / $(window).width();
+			$(".ta-form-body").mousemove(function(e){
+				var pageX = e.pageX - ($(window).width() / 2);
+				var pageY = e.pageY - ($(window).height() / 2);
+				var newvalueX = width * pageX * -1 - 25;
+				var newvalueY = height * pageY * -1 - 50;
+				$('.ta-form-body-inner').css("background-position", newvalueX+"px     "+newvalueY+"px");
+			});
+		});
+	</script>
+</body>
+</html>

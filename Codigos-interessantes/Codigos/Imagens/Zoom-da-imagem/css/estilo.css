@@ -1,0 +1,22 @@
+        * {
+            box-sizing: border-box;
+        }
+        
+        .img-zoom-container {
+            position: relative;
+        }
+        
+        .img-zoom-lens {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            /*Tamanho da lente:*/
+            width: 100px;
+            height: 100px;
+        }
+        
+        .img-zoom-result {
+            border: 1px solid #d4d4d4;
+            /*Tamanha iamgem em zoom:*/
+            width: 500px;
+            height: 500px;
+        }

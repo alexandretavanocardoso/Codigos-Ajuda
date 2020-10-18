@@ -1,0 +1,104 @@
+@import "https://fonts.googleapis.com/css?family=Press+Start+2P";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 200vh;
+  font-family: "Press Start 2P";
+}
+
+.progress {
+  height: 25px;
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  /*width: calc(var(--scroll) * 50%);*/
+  width: var(--scroll-per);
+  z-index: 10;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080,
+    0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+}
+
+.progress span {
+  padding: 1rem;
+}
+
+.slide {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.slide-1 {
+  background: linear-gradient(
+    to right,
+    #12c2e9,
+    #c471ed var(--mouse-x-per, 50%),
+    #f64f59
+  );
+  /*background-position-x: calc(var(--mouse-x)*1px);*/
+}
+
+.slide-1 h1:nth-child(1) {
+  /* opacity: calc(1 - var(--scroll)); */
+  transform: translatex(calc(var(--scroll) * 1000 * 1px));
+}
+
+.slide-1 h1:nth-child(2) {
+  /* opacity: calc(1 - var(--scroll)); */
+  transform: translatex(calc(var(--scroll) * 1000 * -1px));
+}
+
+.slide-1 h1:nth-child(3) {
+  opacity: calc(1 - var(--scroll) * 3);
+}
+
+.slide-2 {
+  background-color: green;
+  background-image: linear-gradient(#fff 1px, transparent 1px),
+    linear-gradient(90deg, #fff 1px, transparent 1px);
+  background-size: 40px 40px, 40px 40px;
+}
+
+.slide-2:hover {
+  background-position-x: calc(var(--mouse-x) * 1px);
+  background-position-y: calc(var(--mouse-y) * 1px);
+}
+
+.slide-2 h1 {
+  /* opacity: calc(1 - var(--scroll)); */
+  /*transform: scale(calc(1 - var(--scroll)));*/
+  transform: translatex(calc(var(--scroll) * 1000 * 1px));
+}
+
+.square {
+  width: 20px;
+  height: 20px;
+  /*border-radius: 50%;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  transform: scale(calc(1 + var(--scroll) * 10))
+    rotate(calc(var(--scroll) * 100 * 1deg));
+}
+
+.slide-3 {
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) calc(var(--scroll) * 25%),
+    rgba(252, 70, 107, 1) 55%
+  );
+}

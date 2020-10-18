@@ -1,0 +1,177 @@
+cookie.aspx
+-------------------------------------------------------------------------------------------------
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="cookie.aspx.cs" Inherits="TrocandoDados.cookie" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server" method="post" action="grava_cookie.aspx">
+        <div>
+            <div>
+                <label for="txtNome">Nome</label>
+                <asp:TextBox runat="server" ID="txtNome"></asp:TextBox>
+            </div>
+            <div>
+                <label for="txtSenha">Senha</label>
+                <asp:TextBox runat="server" ID="txtSenha"></asp:TextBox>
+            </div>
+            <div>
+                <asp:Button runat="server" ID="btnEnviar" Text="Enviar" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+=======================================================================================================
+cookie.aspx.cs
+-------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace TrocandoDados
+{
+    public partial class cookie : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            HttpCookie cookie = Request.Cookies["Usuario"];
+
+            if (cookie != null)
+            {
+                Response.Redirect("le_cookie.aspx");
+            }
+        }
+    }
+}
+=======================================================================================================
+grava_cookie.aspx
+-------------------------------------------------------------------------------------------------------
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="grava_cookie.aspx.cs" Inherits="TrocandoDados.grava_cookie" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:Label runat="server" ID="lblMensagem"></asp:Label>
+
+            <asp:Button ID="btnLerCookie"
+                            runat="server"
+                            Text="Ler Cookie"
+                            PostBackUrl="le_cookie.aspx" />
+        </div>
+    </form>
+</body>
+</html>
+=======================================================================================================
+grava_cookie.aspx.cs
+-------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace TrocandoDados
+{
+    public partial class grava_cookie : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            string nome, senha;
+            nome = Request.Form["txtNome"];
+            senha = Request.Form["txtSenha"];
+
+            HttpCookie cookie = Request.Cookies["Usuario"];
+
+            if (cookie == null)
+            {
+                HttpCookie usuario;
+                usuario = new HttpCookie("Usuario");
+                usuario.Values.Add("Nome", nome);
+                usuario.Values.Add("Senha", senha);
+                usuario.Expires = DateTime.Now.AddDays(5);
+                Response.Cookies.Add(usuario);
+                lblMensagem.Text = "Cookie gravado com sucesso!";
+            }
+            else
+            {
+                Response.Redirect("le_cookie.aspx");
+            }
+        }
+    }
+}
+=======================================================================================================
+le_cookie.aspx
+-------------------------------------------------------------------------------------------------------
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="le_cookie.aspx.cs" Inherits="TrocandoDados.le_cookie" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div>
+                <asp:Label runat="server" ID="lblNome"></asp:Label>
+            </div>
+            <div>
+                <asp:Label runat="server" ID="lblSenha"></asp:Label>
+            </div>
+
+            <div>
+                <asp:Button id="btnExcluir" runat="server" Text="Excluir Cookie" OnClick="btnExcluir_Click"/>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+=======================================================================================================
+le_cookie.aspx.cs
+-------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace TrocandoDados
+{
+    public partial class le_cookie : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            string nome = Request.Cookies["Usuario"]["Nome"];
+            string senha = Request.Cookies["Usuario"]["Senha"];
+
+            lblNome.Text = nome;
+            lblSenha.Text = senha;
+        }
+
+        protected void btnExcluir_Click(object sender, EventArgs e)
+        {
+            Response.Cookies["Usuario"].Expires = DateTime.Now.AddDays(-1);
+            Response.Redirect("cookie.aspx");
+        }
+    }
+}

@@ -1,0 +1,66 @@
+Banco
+---------
+Login
+ protected void Page_Load(object sender, EventArgs e)
+		{
+			if ((Session["Autenticado"]) != null)
+			{
+				string acesso = (Session["Autenticado"].ToString());
+				if (acesso == "N")
+				{
+					lblAcesso.Text = "Usuário ou senha inválidos!";
+				}
+			}
+		}
+
+		protected void btnLogar_Click(object sender, EventArgs e)
+		{
+            string usuario, senha, sql, cn;
+
+            cn = "Data Source=DESKTOP-LB0NUQ6\\SQLEXPRESS;Initial Catalog=TCC-CourseBook;Integrated Security=True";
+
+            usuario = txtLogin.Text;
+            senha = txtSenha.Text;
+
+            sql = "Select * from USUARIO where EMAIL='" + usuario + "' and SENHA='" + senha + "' ";
+
+            SqlConnection con = new SqlConnection(cn);
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataReader tabela = cmd.ExecuteReader();
+
+            if (tabela.Read())
+            {
+                Session["Autenticado"] = "S";
+                Response.Redirect("index.aspx");
+            }
+            else
+            {
+                Session["Autenticado"] = "N";
+                Response.Redirect("login.aspx");
+            }
+
+            cmd.Dispose();
+            con.Close();
+        }
+
+---------------------------------------------------------------------------
+Cadastro
+
+protected void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            string cn = "Data Source=DESKTOP-LB0NUQ6\\SQLEXPRESS;Initial Catalog=TCC-CourseBook;Integrated Security=True";
+
+            string sql = "INSERT INTO USUARIO VALUES ('" + txtNome.Text + "', '" + txtSenha.Text + "', '" + txtEMail.Text + "', 1 , '" + txtConfirmaSenha.Text  +"')";
+
+            using (SqlConnection con = new SqlConnection(cn))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(sql, con))
+                {
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            Response.Redirect("login.aspx");
+        }

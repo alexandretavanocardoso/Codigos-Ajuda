@@ -1,0 +1,78 @@
+@keyframes NomeAnimacao { from{} to{} }
+
+@keyframes NomeAnimacao { 0%{} 50%{} 100%{} }
+
+Animation-name: NomeAnimacao;
+
+Animation-duration: Duração Animação;
+
+Animation-delay: Tempo da Animação começar;
+
+animation-interation-count: Quantas vezes a animação vai rodar; {obs: Infinite}
+
+animation-timing-function: Tempo Animacao com lentidao ou velocidade;
+--------------------------------------------------
+TIMING FUNCTIONS
+
+animation-timing-function: linear;
+Começo, Meio e Fim = Iguais
+
+animation-timing-function: ease;
+Começo Devagar, Meio Rapido e Fim Devagar
+
+animation-timing-function: ease-out;
+Começo Lento, Meio e Fim Padrao
+
+animation-timing-function: ease-in-out;
+Começo Lento, Meio Padrao e Fim Lento;
+----------------------------------------------
+SHORTHAND - nome, duração, timing functions, delay, interation
+
+animation: NomeAnimacao 5s linear 2s infinite;
+---------------------------------------------------
+
+TRANSITION
+
+transition: Tempo;
+
+----------------------------------------
+
+CALC = Calc();
+
+Calc( 50% + 50px);
+
+Calc( 50% + 50px);
+
+Calc( 50% * 2);
+
+Calc( 50% / 2);
+
+------------------------------------------
+
+FONT FACE = Fonte de um link externo do servidor do proprio projeto
+
+Sintaxe Font-face
+@font-face{
+	font-family: "Lage Grafica";
+	src:url(fonts/lage_grafica.ttf);
+}
+
+Classe chamando esse link externo
+.fontface{
+	font-family: "Lage Grafica";
+}
+
+-------------------------------------------
+Media Query - Tag usada para funcionar o Media Query
+
+<meta name="viewport" content="widht=device-widht, initial-scale=1">
+
+@media (max-widht: px){
+	
+	Classes
+	IDs
+	Tags
+}
+
+
+

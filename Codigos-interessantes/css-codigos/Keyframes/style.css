@@ -1,0 +1,279 @@
+/*Animacao from to*/
+
+@keyframes animacao{
+	from {
+		background-color:red;
+	}
+	to{
+		background-color:yellow;
+	}
+}
+
+/*Animacao porcentagem*/
+@keyframes animacao2{
+
+	0% {
+
+	}
+	30%{
+		width: 300px;
+	}
+	60%{
+		background-color: red;
+	}
+	80%{
+		left:100px;
+		background-color:orange;
+	}
+	100%{
+		height: 300px;
+	}
+}
+
+@keyframes  animacao3{
+	from{
+		left:0;
+	}
+	to{
+		left:200px;
+		background-color:green;
+	}
+}
+
+@keyframes animacao4{
+	from{
+		left:0;
+	}
+	to{
+		left: 500px;
+	}
+}
+
+@keyframes animacao5{
+	0%{
+		left:0px;
+	}
+	25%{
+		left: 20px; 
+		background-color: blue;
+	}
+	70%{
+		left: 100px;
+		background-color: orange;
+	}
+	100%{
+		right: 50px;
+		background-color: red;
+	}
+}
+
+.animation-div{
+	width:100px;
+	height:100px;
+	background-color:red;
+	animation-name:animacao;
+	animation-duration: 5s;
+}
+
+.animation-div-2{
+	width:100px;
+	height:100px;
+	background-color:black;
+	animation-name:animacao2;
+	animation-duration: 6s;
+	position: relative;
+}
+
+.animation-div-3{
+	width:100px;
+	height:100px;
+	background-color:purple;
+	position: relative;
+	animation-name: animacao3;
+	animation-duration: 5s;
+	animation-delay: 2s; 
+	animation-iteration-count: infinite;
+}
+
+/*Timing Functions*/
+.box{
+	background-color: orange;
+	width: 500px;
+	height: auto;
+	position: relative;
+	animation-name: animacao4;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+
+#animation-div4{
+	animation-timing-function: linear;
+}
+
+#animation-div5{
+	animation-timing-function: ease;
+}
+
+#animation-div6{
+	animation-timing-function: ease-in;
+}
+
+#animation-div7{
+	animation-timing-function: ease-out;
+}
+
+#animation-div8{
+	animation-timing-function: ease-in-out;
+}
+
+/*SHORTHAND - nome, duração, timing functions, delay, interation*/
+
+#animation-div9{
+	width: 50px;
+	height: 50px;
+	background-color: darkblue;
+	position:relative;
+	animation: animacao5 5s linear 2s infinite;
+}
+
+/*transition*/
+
+.transition{
+	width: 50px;
+	height: 50px;
+	background-color: red;
+	transition: 4s;
+}
+
+.transition:hover{
+	width: 400px;
+}
+
+.btn{
+	display: block;
+	position: relative;
+	padding:10px;
+	margin-bottom: 25px;
+	width: 150px;
+	height: 50px;
+	color: #FFF;
+	text-transform: uppercase;
+	background-color: #333;
+	border: 1px solid #333;
+	cursor: pointer;
+	transition: 1s;
+}
+
+.btn:hover{
+	background-color: blue;
+}
+
+/*CALC*/
+
+
+.div-calc{
+	height: 250px;
+	width: 500px;
+	position: relative;
+	margin:20px;
+	background-color: #DDD;
+	border:1px solid red;
+}
+
+.innerdiv-calc{
+	height:50px ;
+	margin:10px;
+	position: relative;
+	background-color: red;
+}
+
+.calc1{
+	width: calc(50% + 50px);
+}
+
+.calc2{
+	width: calc(50% - 50px);
+}
+
+.calc3{
+	width: calc(50% * 2);
+	margin: 0;
+}
+
+.calc4{
+	width: calc(50% / 2);
+}
+
+/*Gradient Linear*/
+
+.gradient-box {
+	width: 500px;
+	height: 200px;
+	position: relative;
+	margin: 5px;
+	padding: 2%;
+
+	/* Fonte */
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+}
+
+.gradient1{
+	height: 100px;
+	background-image: linear-gradient(purple, blue);
+}
+
+.gradient2{
+	height: 100px;
+	background-image: linear-gradient(to right,red, pink, purple);
+}
+
+.gradient3{
+	height: 100px;
+	background-image: linear-gradient(to left,red, pink, green);
+}
+
+.gradient4{
+	height: 100px;
+	background-image: linear-gradient(to bottom,red, pink, purple);
+}
+
+.gradient5{
+	height: 100px;
+	background-image: linear-gradient(to top,red, brown, purple);
+}
+
+.gradient6{
+	height: 100px;
+	background-image: linear-gradient(to top right,red, gray, purple);
+}
+
+/*Gradient Radial*/
+
+.gradient7{
+	height: 100px;
+	background-image: radial-gradient(orange, blue, purple);
+}
+
+.gradient8{
+	height: 100px;
+	background-image: radial-gradient(gray 50%, green 10%, pink);
+}
+
+.gradient9{
+	height: 100px;
+	background-image: radial-gradient(circle,purple, brown, darkblue);
+}
+
+/*Font-Face*/
+
+@font-face{
+	font-family: "Lage Grafica";
+	src:url(fonts/lage_grafica.ttf);
+}
+
+
+.fontface{
+	font-family: "Lage Grafica";
+}

@@ -1,0 +1,84 @@
+/* Requirements */
+li{
+  list-style-type: none;
+}
+[data-accordion] [data-content] {
+    overflow: hidden;
+    max-height: 0;
+}
+[data-content]{
+  border: none;
+  border-radius: 0;
+}
+
+[data-accordion] {
+    line-height: 1;
+    width: 50%;
+    margin: 1rem auto;
+    background-color: transparent;
+    color: black;
+}
+.acc-head{
+  border: 0px solid transparent;
+  border-radius: 20px;
+  background-color: rgba(25, 25, 112, .8);
+  color: white;
+}
+.acc-head.on{
+  background-color: rgba(25, 25, 112, .4);
+}
+
+/* [data-control]{
+  display: inline-flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+} */
+
+[data-control],
+[data-content] > * {
+/*     border-bottom: 1px solid white; */
+    padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/*[data-accordion],[data-content] div{
+  border-bottom: 1px solid white;
+} */
+
+[data-content] [data-accordion] {
+    border: 0;
+    padding: 0;
+}
+
+[data-accordion] [data-control] {
+    padding: 1rem;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    align-content: center;
+}
+/* [data-accordion].open > [data-control]{
+  border-bottom: 1px solid transparent;
+  border-bottom-radius: 20px;
+} */
+
+/* [data-accordion] > [data-control]:after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    font-size: 25px;
+    font-weight: 200;
+    color: #444;
+    height: 15px;
+    width: 24px;
+    background: url('https://vctrfrnndz.github.io/jquery-accordion/images/down.png') center center no-repeat;
+    background-size: 50%;
+} */
+
+[data-accordion].open > [data-control] i {
+    -webkit-transform: rotate(-180deg); 
+    -ms-transform: rotate(-180deg); 
+    transform: rotate(-180deg); 
+}

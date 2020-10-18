@@ -1,0 +1,11 @@
+Using
+
+using System.Data.SqlClient;
+
+------------------------------------------------------------------------------------------------------
+Conectando
+
+string sqlserver = "Nome Server"; //TROCAR PELO SEU SERVIDOR
+                string strcon = "Server=" + sqlserver + ";Database=Banco;User Id=sa;Password=123456;";
+
+------------------------------------------------------------------------------------------------------

@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.ceu {
+    height: 100vh;
+    width: 100%;
+    background-image: url("sky.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.rua {
+    height: 200px;
+    width: 500%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url(road.jpg);
+    background-repeat: repeat-x;
+    animation: rua 5s linear infinite;
+}
+
+@keyframes rua {
+    100% {
+        transform: translateX(-3400px);
+    }
+}
+
+.cidade {
+    height: 250px;
+    width: 500%;
+    position: absolute;
+    bottom: 200px;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 1;
+    background-repeat: repeat-x;
+    background-image: url(city.png);
+    animation: cidade 20s linear infinite;
+}
+
+@keyframes cidade {
+    100% {
+        transform: translateX(-1400px);
+    }
+}
+
+.carro {
+    width: 400px;
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+}
+
+.carro img {
+    width: 100%;
+    animation: carro 1s linear infinite
+}
+
+@keyframes carro {
+    100% {
+        transform: translateY(-1px);
+    }
+    50% {
+        transform: translateY(1px);
+    }
+    0% {
+        transform: translateY(-1px);
+    }
+}
+
+.roda {
+    left: 50%;
+    bottom: 182px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+}
+
+.roda img {
+    width: 72px;
+    height: 72px;
+    animation: roda 1s linear infinite;
+}
+
+.roda-tras {
+    left: -165px;
+    position: absolute;
+}
+
+.roda-frente {
+    left: 80px;
+    position: absolute;
+}
+
+@keyframes roda {
+    100% {
+        transform: rotate(360deg);
+    }
+}
