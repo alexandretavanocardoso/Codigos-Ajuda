@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+
+    <a href="Lidando_com_Elementos.html">Lidando com Elementos</a>
+
+    <div id="app">
+        <input type="text" name="nome" class="nome" id=nome>
+        <button class="botao">Adicionar</button>
+    </div>
+
+    <script>
+
+        // Formas de mexer com a DOM
+        // var inputElementId = document.getElementById("nome");
+        // var inputElementTag = document.getElementsByTagName("input")[0];
+        // var inputElementClasse = document.getElementsByClassName("nome")[0];
+
+        // A propriedade querySelector retorna apenas um resultado
+        // Permite percorre o HTML
+        // Procurando TAG var InputElementQuerySelector = document.querySelector("body div#app input");
+        // Procurando Atributos (NAME) var InputElementQuerySelector = document.querySelector("input[name=nome]");
+
+        var inputElemnt = document.querySelector("input[name=nome]");
+        var btnElement = document.querySelector("button.botao");
+
+        btnElement.onclick = function () {
+            var textDigitadoInput = inputElemnt.value;
+            alert(textDigitadoInput);
+        }
+
+    </script>
+</body>
+
+</html>
