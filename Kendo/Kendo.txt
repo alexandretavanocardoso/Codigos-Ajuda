@@ -1,0 +1,14 @@
+<head>
+  <meta charset="utf-8">
+  <title>Kendo - Teste Page</title>
+
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.3.1021/styles/kendo.common.min.css">
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.3.1021/styles/kendo.rtl.min.css">
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.3.1021/styles/kendo.default.min.css">
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2020.3.1021/styles/kendo.mobile.all.min.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+  <script src="https://kendo.cdn.telerik.com/2020.3.1021/js/angular.min.js"></script>
+  <script src="https://kendo.cdn.telerik.com/2020.3.1021/js/jszip.min.js"></script>
+  <script src="https://kendo.cdn.telerik.com/2020.3.1021/js/kendo.all.min.js"></script>
+</head>

@@ -9,17 +9,31 @@
 
 <body>
 
-    <a href="Lidando_com_Elementos.html">Lidando com Elementos</a>
-
+    <a href="Estilizando.html"> Estilizando </a>
+    <hr />
     <div id="app">
-        <input type="text" name="nome" class="nome" id=nome>
-        <button class="botao">Adicionar</button>
+       <input id="nome">
     </div>
 
     <script>
 
+        // Criar Link
+        var linkElemnt = document.createElement('a');
+        linkElemnt.setAttribute('href', 'https://app.rocketseat.com.br/node/curso-java-script');
+        // Incluir o texto do link
+        var textElement = document.createTextNode('Acessar site da Rocket');
+        // Posiciona texto com o link 
+        // appendChild - Adicionar como filho
+        linkElemnt.appendChild(textElement);
+        // Faz mostrar no HTML - querySelector - Traça um caminho, procura por id, tag etec
+        var containerElement = document.querySelector('#app');
+        containerElement.appendChild(linkElemnt);
 
 
+        /* Referencia,  Quando ja tem algo no HTML */
+        var inputElement = document.querySelector('#nome')
+        // Remove
+        containerElement.removeChild(inputElement);
     </script>
 </body>
 

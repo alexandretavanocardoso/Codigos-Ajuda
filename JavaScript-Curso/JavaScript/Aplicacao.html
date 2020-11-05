@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocketseat - Todos</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <ul>
+
+        </ul>
+        <input type="text" placeholder="Difite um todo">
+        <button>Adicionar</button>
+    </div>
+
+
+    <script>
+
+        // Referenciando com HTML - DOM
+        var listElement = document.querySelector('#app ul');
+        var inputElement = document.querySelector('#app input');
+        var buttonElement = document.querySelector('#app button');
+
+
+        // Usando localStorage para continuar ao atualizar
+        // JSON.parse = VOlta como array
+        var todos = JSON.parse(localStorage.getItem('list_todos')) || [];
+
+        // Renderizar em Tela
+        // createElement - Cria elemento
+        // createTextNode - Cria o Texto
+        function renderTodos() {
+
+            // Tudo q tiver na Ul dexa como vazio
+            listElement.innerHTML = '';
+
+            for (todo of todos) {
+                var todoElement = document.createElement('li');
+                var todoText = document.createTextNode(todo)
+
+                // Excluir Tarefas
+                var linkElement = document.createElement('a');
+                linkElement.setAttribute('href', '#');
+                var linkText = document.createTextNode('Excluir');
+
+                // Posição das tarefas
+                // indexOf - Retorna posição
+                var pos = todos.indexOf(todo);
+                linkElement.setAttribute('onclick', 'exluiTodo(' + pos + ')');
+
+                // Adicionar como filho
+                todoElement.appendChild(todoText);
+                todoElement.appendChild(linkElement);
+                listElement.appendChild(todoElement);
+                linkElement.appendChild(linkText);
+
+            }
+        }
+        // Chama Função
+        renderTodos();
+
+        // Adicionar Tarefa
+        function addTodo() {
+            var todoText = inputElement.value;
+
+            // Adicionar o "todoText" no Array
+            // push() - Função que adiona no final fo array
+            todos.push(todoText);
+            // Deixar o Input Vazio
+            inputElement.value = '';
+            // Recarrega a função
+            renderTodos();
+            salvaTodo();
+        }
+        buttonElement.onclick = addTodo;
+
+        // Excluir
+        function exluiTodo(pos) {
+            // Remove quantidade de intns a partir da posição
+            todos.splice(pos, 1);
+            renderTodos();
+            salvaTodo();
+        }
+
+        // salva no STORAGE
+        function salvaTodo() {
+
+            localStorage.setItem('list_todos', JSON.stringify(todos));
+
+        }
+
+    </script>
+</body>
+
+</html>
