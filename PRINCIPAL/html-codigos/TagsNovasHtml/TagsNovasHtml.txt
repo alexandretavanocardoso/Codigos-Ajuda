@@ -1,0 +1,43 @@
+Tags HTML5
+
+Video
+<video width="320" height="240" controls>
+	<source src="video/cidade.mp4" type="video/mp4">
+</video>
+-----------------------------------------------------------
+Audio
+<audio controls>
+	<source src="audio/music.mp3" type="audio/mpeg">
+</audio>
+------------------------------------------------------
+Figure = Imagem
+<figure>
+	<img src="img/ricefield.jpg" alt="Campo de arroz">
+	<figcaption>Um lindo campo de arroz...</figcaption> = Legenda
+</figure>
+----------------------------------------------------
+Progress = Barra de Progresso
+<progress value="63" max="100">
+----------------------------------------------------
+Details - Summary
+<details open="open"> Open = Ja vem aberto com as informações Close = Vem fechado
+	<summary>Cachorro</summary> = Titulo
+	<p>É um mamífero de 4 patas e também é um animal doméstico.</p> = Descrição
+</details>
+--------------------------------------------
+Datalist
+<form>
+<p>Animais:</p>
+	<input list="animais" name="animal">
+	<datalist id="animais"> = Busca o "list" do input
+	<option value="Cachorro"></option> = Opções que aparecem
+	<option value="Gato"></option>
+	<option value="Cavalo"></option>
+	<option value="Elefante"></option>
+	</datalist>
+</form>
+--------------------------------------------------------
+
+Atributo contenteditable = "true"
+Pode ser editado em tempo real
+

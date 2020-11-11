@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Menu Scrool | Responsivo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Media query Funcionar-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header id="header">
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#home" onclick="toggle()">Home</a></li>
+            <li><a href="#about" onclick="toggle()">About</a></li>
+            <li><a href="#services" onclick="toggle()">Services</a></li>
+            <li><a href="#portfolio" onclick="toggle()">Portfolio</a></li>
+            <li><a href="#team" onclick="toggle()">Team</a></li>
+            <li><a href="#contact" onclick="toggle()">Contact</a></li>
+        </ul>
+        <div class="toggle" onclick="toggle()"></div>
+    </header>
+    <section class="banner" id="home">
+        <h2>We Make<br><span>Brands</span> Matter</h2>
+    </section>
+
+    <!-- Script para Scrool nos elemento na mesma pagina-->
+    <script type="text/javascript">
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+
+        function toggle() {
+            var header = document.getElementById('header');
+            header.classList.toggle('active')
+        }
+    </script>
+</body>
+
+</html>
