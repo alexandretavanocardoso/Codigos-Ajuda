@@ -1,6 +1,0 @@
-====>>> EVENTOS
-
-function(event){event.preventDefault();} 
-event.preventDefault(); - Tira o comportamento padrao
-
-====>>> EVENTOS AQUI

@@ -1,0 +1,26 @@
+====>>> TIRA COMPORTAMENTO PADRAO
+
+function(event){event.preventDefault();} 
+event.preventDefault(); - Tira o comportamento padrao
+
+$(this).funçao - this se refere ao proprio elemento
+
+$('p').click() - simula o Evento
+
+==> EVENTOS
+
+==> MOUSE
+
+.mousedown(function() {}) - Evento para quando pressionar o mouse
+.mouseup(function() {}) -Evento para quando soltar o mouse
+.click(function() {}) - Evento que faz o processo do mousedown e mouseup
+.contextmenu(function() {}) - Evento quando clica com o botão direito
+.dblclick(function() {}) - Evento quando da um double click
+.mouseenter(function() {}) - Evento quando  o mouse entra no elemento
+.mouseleave(function() {}) - Evento quando o mouse sai no elemento
+.hover(function() {}) - Evento que faz o processo do mouseenter e mouseleave
+.mousemove(function(event) {}) - Evento para quando o mouse se movimenta dentro de um elemento
+
+==> TECLADO
+
+==>FORMULARIO
