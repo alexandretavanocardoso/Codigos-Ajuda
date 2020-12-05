@@ -14,6 +14,10 @@
 .length - Conta a quantidade do elemento
 this - Direciona para o mesmo elemento
 
+==> NAVEGA PELO DOCUMENTO
+
+.find() - melhor ser usado estilo pai e filho
+
 ==> ADICONA TAG NO ELEMENTO
 
 .wrap() - Adiciona tags novas ao conteudo EX.'<i></i>'

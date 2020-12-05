@@ -1,7 +1,3 @@
-====>>> TIRA COMPORTAMENTO PADRAO
-
-function(event){event.preventDefault();} 
-event.preventDefault(); - Tira o comportamento padrao
 
 $(this).funçao - this se refere ao proprio elemento
 
@@ -23,4 +19,57 @@ $('p').click() - simula o Evento
 
 ==> TECLADO
 
+=> Exemplo para mostar a tecla pressionada
+==> keycode - Código da tecla
+$('.i1').keydown(function(event) {
+    alert(`Clicou na Tecla ${event.keyCode}`)
+});
+
+==> usando event
+keydown(function(event){})
+
+.keydown(function(){}) - Evento para quando clicar uma tecla
+.keyup(function(){}) - Evento para quando soltar uma tecla
+.keypress(function() {}) - vento para quando pressionar uma tecla
+
 ==>FORMULARIO
+
+.focus(function() {}) - Evento quando recebe o foco
+.blur(function() {}) - Evento para quando o elemento perder o foco
+.focusin(function() {}) - Evento quando o elemento pai do form é acionado
+.focusout(function() {}) - Evento quando o elemento pai do form perde o foco
+.change(function() {}) - Evento quando o campo mudar o valor do campo
+.select(function() {}) - Evento quando seleciona o valor do campo
+.submit(function(event) {}) - Evento quando o form esta correto
+
+==> BROWSER
+- Deve usar o WINDOW = Janela
+
+$(window).função(function(){});
+
+.resize(function() {}) - Evento quando o navegador mudar seu tamanho
+.scroll(function() {}) - Evento quando a barra de rolagem se mover
+
+==> Método on()
+
+==> RETORNA UM OBJETO ARRAY
+
+.serializeArray() - Retorna um array
+
+==> OBJECT 'EVENT' - console.log(event); - ve todas possibilidades do event
+
+=> Métodos
+
+event.preventDefault() - Para a execução padrao do evento
+event.stopPropagation() - Para a propagração de eventos
+
+=> Retorna
+
+event.key - Retorna a tecla pressionada
+event.keyCode - Retorna o codigo da tecla pressionada
+even.which - Retorna o codigo da tecla pressionada
+event.type - Retorna o tipo do evento 
+event.target.localName - Retorna a tag com o nome 
+event.currentTarget - Retorna onde aconteceu o evento
+event.pageX - Retorna o valor de X
+event.pageY - Retorna o valor de Y
