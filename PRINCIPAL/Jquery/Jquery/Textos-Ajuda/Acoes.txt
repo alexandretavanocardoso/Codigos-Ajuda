@@ -1,3 +1,0 @@
-.click(function(){}) - Clique
-.hover(function(){}) - passar o mouse
-.focus(function(){}) - Quando clica emcima do elemento
