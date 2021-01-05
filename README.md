@@ -6,7 +6,7 @@
 
 ## Eae developers
 
-Nesse repositório contém códigos, projetos, tudo sobre HTML, CSS, JS, MySQL, SQL entre muitos mais, que aos poucos irei dando Updates para a maior satisfação.
+#### Nesse repositório contém códigos, projetos, tudo sobre HTML, CSS, JS, MySQL, SQL entre muitos mais, que aos poucos irei dando Updates para a maior satisfação.
 ---
 
 ## O que contém ? 
